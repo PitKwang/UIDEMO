@@ -12,7 +12,6 @@
 <?import javafx.scene.layout.VBox?>
 <?import javafx.scene.text.Font?>
 
-
 <AnchorPane prefHeight="500.0" prefWidth="800.0" xmlns="http://javafx.com/javafx/8.0.141" xmlns:fx="http://javafx.com/fxml/1" fx:controller="adminDashBoard.dashBoardController">
    <children>
       <Pane prefHeight="88.0" prefWidth="800.0" style="-fx-background-color: #29b6f6;">
@@ -64,18 +63,18 @@
             </VBox>
          </children>
       </Pane>
-      <TableView layoutX="217.0" layoutY="160.0" prefHeight="281.0" prefWidth="551.0">
+      <TableView fx:id="employeeTable" layoutX="217.0" layoutY="160.0" prefHeight="281.0" prefWidth="551.0">
         <columns>
-          <TableColumn prefWidth="66.0" text="ID" />
-          <TableColumn prefWidth="166.0" text="Name" />
-            <TableColumn minWidth="0.0" prefWidth="72.0" text="Positon" />
-            <TableColumn prefWidth="160.0" text="Email" />
-            <TableColumn prefWidth="86.0" text="Salary" />
+          <TableColumn fx:id="idcolumn" prefWidth="66.0" text="ID" />
+          <TableColumn fx:id="namecolumn" prefWidth="166.0" text="Name" />
+            <TableColumn fx:id="positioncolumn" minWidth="0.0" prefWidth="72.0" text="Positon" />
+            <TableColumn fx:id="emailcolumn" prefWidth="160.0" text="Email" />
+            <TableColumn fx:id="salarycolumn" prefWidth="86.0" text="Salary" />
         </columns>
       </TableView>
       <JFXTextField layoutX="536.0" layoutY="110.0" prefHeight="25.0" prefWidth="232.0" />
       <FontAwesomeIconView glyphName="SEARCH" layoutX="514.0" layoutY="131.0" size="15" wrappingWidth="15.142857551574707" />
-      <JFXButton layoutX="679.0" layoutY="452.0" prefHeight="25.0" prefWidth="89.0" style="-fx-background-color: #29b6f6;" text="Load">
+      <JFXButton fx:id="btnload" layoutX="679.0" layoutY="452.0" onAction="#loadEmpleyeeData" prefHeight="25.0" prefWidth="89.0" style="-fx-background-color: #29b6f6;" text="Load">
          <graphic>
             <FontAwesomeIconView glyphName="DOWNLOAD" />
          </graphic>
